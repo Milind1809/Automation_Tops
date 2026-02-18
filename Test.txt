@@ -1,0 +1,30 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+
+import com.google.common.primitives.Chars;
+
+public class Alert {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\MilindSomaiya\\OneDrive - i3 Verticals\\Milind\\Milind Automation\\chromedriver_144\\chromedriver-win64\\chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		//WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver(options);
+		driver.get("https://demoqa.com");
+		driver.manage().window().maximize();
+	
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/div/div[2]/div/a[3]/div/div/div[3]/h5")).click();
+		driver.findElement(By.xpath("//*[@id=\"item-1\"]/a[@href=\"/alerts\"]")).click();
+		
+		
+		
+		
+
+	
+	}
+}
